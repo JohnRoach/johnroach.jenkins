@@ -1,0 +1,15 @@
+galaxy_info:
+  author: John Roach
+  description: This role installs Jenkins
+
+  min_ansible_version: 2.4
+
+  galaxy_tags:
+    - developer
+    - ci
+    - cd
+
+dependencies:
+  - role: geerlingguy.java
+    java_packages:
+        - java-1.8.0-openjdk

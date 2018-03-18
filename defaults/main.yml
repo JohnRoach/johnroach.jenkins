@@ -1,0 +1,4 @@
+---
+jenkins_repo_url: "https://pkg.jenkins.io/redhat/jenkins.repo"
+jenkins_rpm_key_url: "https://pkg.jenkins.io/redhat/jenkins.io.key"
+jenkins_rpm_artifact_url: "https://pkg.jenkins.io/redhat/jenkins-2.111-1.1.noarch.rpm"

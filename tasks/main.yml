@@ -1,0 +1,29 @@
+---
+- name: Place jenkins repo definition
+  get_url:
+    url: "{{ jenkins_repo_url }}"
+    dest: "{{ jenkins_repo_path }}"
+  become: yes
+
+- name: Import repository key
+  command: "rpm --import {{ jenkins_rpm_key_url }}"
+  become: yes
+  changed_when: no
+
+- name: Install Jenkins
+  yum:
+    name: "jenkins"
+    state: present
+  become: yes
+
+- name: Register and start Jenkins service
+  service:
+    name: "jenkins"
+    state: started
+    enabled: yes
+  become: yes
+
+- name: Wait 300 seconds for port 8080 to become open on the host
+  wait_for:
+    port: 8080
+    timeout: 300
