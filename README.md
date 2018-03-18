@@ -22,7 +22,7 @@ Dependencies
 ------------
 The roles that this role is dependent are:
 
-- williamyeh.oracle-java
+- geerlingguy.java
 
 Example Playbook
 ----------------
